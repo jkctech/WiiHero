@@ -1,0 +1,13 @@
+J:\Workspace\WiiHero\GuitarConnector\bin\Release\WiiHero.exe.config
+J:\Workspace\WiiHero\GuitarConnector\bin\Release\WiiHero.exe
+J:\Workspace\WiiHero\GuitarConnector\bin\Release\WiiHero.pdb
+J:\Workspace\WiiHero\GuitarConnector\bin\Release\SimWinGamePad.dll
+J:\Workspace\WiiHero\GuitarConnector\obj\Release\GuitarConnector.csprojAssemblyReference.cache
+J:\Workspace\WiiHero\GuitarConnector\obj\Release\GuitarConnector.MainWindow.resources
+J:\Workspace\WiiHero\GuitarConnector\obj\Release\GuitarConnector.Properties.Resources.resources
+J:\Workspace\WiiHero\GuitarConnector\obj\Release\GuitarConnector.Properties.Strings.resources
+J:\Workspace\WiiHero\GuitarConnector\obj\Release\GuitarConnector.csproj.GenerateResource.cache
+J:\Workspace\WiiHero\GuitarConnector\obj\Release\GuitarConnector.csproj.CoreCompileInputs.cache
+J:\Workspace\WiiHero\GuitarConnector\obj\Release\GuitarConnector.csproj.CopyComplete
+J:\Workspace\WiiHero\GuitarConnector\obj\Release\WiiHero.exe
+J:\Workspace\WiiHero\GuitarConnector\obj\Release\WiiHero.pdb

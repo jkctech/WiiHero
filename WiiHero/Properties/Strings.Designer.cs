@@ -97,6 +97,15 @@ namespace GuitarConnector.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Could not pair correctly with serial device. Please try again..
+        /// </summary>
+        internal static string error_pairing {
+            get {
+                return ResourceManager.GetString("error_pairing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Could not read from serial port..
         /// </summary>
         internal static string error_read {

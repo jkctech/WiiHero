@@ -67,7 +67,7 @@ namespace GuitarConnector
             buttons[(int)Buttons.Blue]      = bytes[6] == 255;
             buttons[(int)Buttons.Orange]    = bytes[7] == 255;
 
-            // Other
+            // Menu Buttons
             window.cb_plus.Checked      = buttons[(int)Buttons.Plus];
             window.cb_starpower.Checked = buttons[(int)Buttons.Starpower];
 
@@ -82,7 +82,15 @@ namespace GuitarConnector
             window.cb_blue.Checked   = buttons[(int)Buttons.Blue];
             window.cb_orange.Checked = buttons[(int)Buttons.Orange];
 
-            window.tb_wham.Value = Limit(bytes[0], 16, 26) - 16;
+            // Whammy bar
+            try
+            {
+                window.tb_wham.Value = Limit(bytes[0], 16, 26) - 16;
+            }
+            catch (Exception)
+            {
+                window.tb_wham.Value = 0;
+            }
 
             //controls[(int)Controls.WhammyBar] =  - 16;
             if (plugged)
@@ -102,7 +110,7 @@ namespace GuitarConnector
                 }
 
                 // Whammy bar
-                state.RightStickX = (short)Map(Limit(bytes[0], 16, 26), 16, 26, 128, 255);
+                state.RightStickX = (short)(short.MaxValue * Map(Limit(bytes[0], 16, 26), 16, 26, 0, 1));
 
                 simPad.Update(0);
                 simPad.Update();
@@ -120,17 +128,30 @@ namespace GuitarConnector
                         break;
                     if (run && serial != null && serial.IsOpen())
                     {
-                        try
+                        for (int i = 1; i < 3; i++)
                         {
-                            data = serial.ReadLine(true);
-                            bytes = data.Split(',').Select(n => int.Parse(n)).ToArray();
-                            Process(bytes);
-                        }
-                        catch (Exception e)
-                        {
-                            MessageBox.Show(e.ToString());
-                            run = false;
-                            worker.Abort();
+                            try
+                            {
+                                data = serial.ReadLine(true);
+                                bytes = data.Split(',').Select(n => int.Parse(n)).ToArray();
+                                Process(bytes);
+                            }
+                            catch (Exception)
+                            {
+                                if (i >= 3)
+                                {
+                                    Utils.Warning(Properties.Strings.error_pairing);
+                                    run = false;
+                                    if (serial.IsOpen())
+                                        serial.Close();
+                                    window.cb_ports.Enabled = true;
+                                    window.btn_refresh.Enabled = true;
+                                    window.btn_connect.Text = "Connect";
+                                    break;
+                                }
+                                continue;
+                            }
+                            break;
                         }
                     }
                     Application.DoEvents();
@@ -138,9 +159,9 @@ namespace GuitarConnector
             }));
         }
 
-        public static int Map(int value, int fromSource, int toSource, int fromTarget, int toTarget)
+        public static double Map(int value, int fromSource, int toSource, int fromTarget, int toTarget)
         {
-            return (value - fromSource) / (toSource - fromSource) * (toTarget - fromTarget) + fromTarget;
+            return ((double)value - fromSource) / ((double)toSource - fromSource) * ((double)toTarget - fromTarget) + fromTarget;
         }
 
         private static int Limit(int num, int min, int max)

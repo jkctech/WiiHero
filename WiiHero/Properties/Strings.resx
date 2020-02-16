@@ -129,6 +129,9 @@
   <data name="error_opening" xml:space="preserve">
     <value>Could not open COM port.</value>
   </data>
+  <data name="error_pairing" xml:space="preserve">
+    <value>Could not pair correctly with serial device. Please try again.</value>
+  </data>
   <data name="error_read" xml:space="preserve">
     <value>Could not read from serial port.</value>
   </data>

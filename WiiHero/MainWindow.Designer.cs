@@ -231,11 +231,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cb_ports;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_connect;
-        private System.Windows.Forms.Button btn_refresh;
         public System.Windows.Forms.CheckBox cb_green;
         public System.Windows.Forms.CheckBox cb_red;
         public System.Windows.Forms.CheckBox cb_yellow;
@@ -248,6 +244,9 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TrackBar tb_wham;
         private System.Windows.Forms.Button btn_plugcontroller;
+        public System.Windows.Forms.ComboBox cb_ports;
+        public System.Windows.Forms.Button btn_connect;
+        public System.Windows.Forms.Button btn_refresh;
     }
 }
 

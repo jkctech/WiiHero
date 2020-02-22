@@ -11,3 +11,4 @@ J:\Workspace\WiiHero\WiiHero\obj\Debug\WiiHero.csproj.CoreCompileInputs.cache
 J:\Workspace\WiiHero\WiiHero\obj\Debug\WiiHero.csproj.CopyComplete
 J:\Workspace\WiiHero\WiiHero\obj\Debug\WiiHero.exe
 J:\Workspace\WiiHero\WiiHero\obj\Debug\WiiHero.pdb
+J:\Workspace\WiiHero\WiiHero\obj\Debug\GuitarConnector.GuitarScreen.resources

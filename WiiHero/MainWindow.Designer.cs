@@ -40,6 +40,9 @@
             this.tb_wham = new System.Windows.Forms.TrackBar();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_plugcontroller = new System.Windows.Forms.Button();
+            this.cb_controller = new System.Windows.Forms.ComboBox();
+            this.ll_github = new System.Windows.Forms.LinkLabel();
+            this.btn_guitarscreen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tb_wham)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,7 +176,7 @@
             // 
             // tb_wham
             // 
-            this.tb_wham.Location = new System.Drawing.Point(12, 214);
+            this.tb_wham.Location = new System.Drawing.Point(12, 223);
             this.tb_wham.Name = "tb_wham";
             this.tb_wham.Size = new System.Drawing.Size(205, 45);
             this.tb_wham.TabIndex = 15;
@@ -181,7 +184,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 198);
+            this.label2.Location = new System.Drawing.Point(12, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 16;
@@ -189,19 +192,53 @@
             // 
             // btn_plugcontroller
             // 
-            this.btn_plugcontroller.Location = new System.Drawing.Point(118, 185);
+            this.btn_plugcontroller.Location = new System.Drawing.Point(118, 194);
             this.btn_plugcontroller.Name = "btn_plugcontroller";
-            this.btn_plugcontroller.Size = new System.Drawing.Size(96, 23);
+            this.btn_plugcontroller.Size = new System.Drawing.Size(95, 23);
             this.btn_plugcontroller.TabIndex = 17;
             this.btn_plugcontroller.Text = "Plug";
             this.btn_plugcontroller.UseVisualStyleBackColor = true;
             this.btn_plugcontroller.Click += new System.EventHandler(this.btn_plugcontroller_Click);
             // 
+            // cb_controller
+            // 
+            this.cb_controller.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_controller.FormattingEnabled = true;
+            this.cb_controller.Location = new System.Drawing.Point(118, 167);
+            this.cb_controller.Name = "cb_controller";
+            this.cb_controller.Size = new System.Drawing.Size(95, 21);
+            this.cb_controller.TabIndex = 18;
+            this.cb_controller.SelectedIndexChanged += new System.EventHandler(this.cb_controller_SelectedIndexChanged);
+            // 
+            // ll_github
+            // 
+            this.ll_github.AutoSize = true;
+            this.ll_github.Location = new System.Drawing.Point(175, 263);
+            this.ll_github.Name = "ll_github";
+            this.ll_github.Size = new System.Drawing.Size(38, 13);
+            this.ll_github.TabIndex = 19;
+            this.ll_github.TabStop = true;
+            this.ll_github.Text = "Github";
+            this.ll_github.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_github_LinkClicked);
+            // 
+            // btn_guitarscreen
+            // 
+            this.btn_guitarscreen.Location = new System.Drawing.Point(15, 258);
+            this.btn_guitarscreen.Name = "btn_guitarscreen";
+            this.btn_guitarscreen.Size = new System.Drawing.Size(95, 23);
+            this.btn_guitarscreen.TabIndex = 20;
+            this.btn_guitarscreen.Text = "GuitarScreen";
+            this.btn_guitarscreen.UseVisualStyleBackColor = true;
+            this.btn_guitarscreen.Click += new System.EventHandler(this.btn_guitarscreen_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(229, 271);
+            this.ClientSize = new System.Drawing.Size(229, 285);
+            this.Controls.Add(this.btn_guitarscreen);
+            this.Controls.Add(this.ll_github);
+            this.Controls.Add(this.cb_controller);
             this.Controls.Add(this.btn_plugcontroller);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_wham);
@@ -247,6 +284,9 @@
         public System.Windows.Forms.ComboBox cb_ports;
         public System.Windows.Forms.Button btn_connect;
         public System.Windows.Forms.Button btn_refresh;
+        public System.Windows.Forms.ComboBox cb_controller;
+        private System.Windows.Forms.LinkLabel ll_github;
+        public System.Windows.Forms.Button btn_guitarscreen;
     }
 }
 

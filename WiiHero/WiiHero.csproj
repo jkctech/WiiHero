@@ -35,6 +35,9 @@
   <PropertyGroup>
     <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="SimWinGamePad, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\SimWinGamePad.1.0.6\lib\net40\SimWinGamePad.dll</HintPath>
@@ -52,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GuitarScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuitarScreen.Designer.cs">
+      <DependentUpon>GuitarScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +77,9 @@
     <Compile Include="Utils.cs" />
     <Compile Include="Serial.cs" />
     <Compile Include="Worker.cs" />
+    <EmbeddedResource Include="GuitarScreen.resx">
+      <DependentUpon>GuitarScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +91,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,6 +113,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\green_off.png" />
+    <None Include="Resources\red_off.png" />
+    <None Include="Resources\yellow_off.png" />
+    <None Include="Resources\blue_off.png" />
+    <None Include="Resources\orange_off.png" />
+    <Content Include="Resources\blue_on.png" />
+    <Content Include="Resources\green_on.png" />
+    <Content Include="Resources\orange_on.png" />
+    <None Include="Resources\plus_off.png" />
+    <None Include="Resources\plus_on.png" />
+    <Content Include="Resources\red_on.png" />
+    <None Include="Resources\starpower_off.png" />
+    <None Include="Resources\starpower_on.png" />
+    <None Include="Resources\strum_down.png" />
+    <None Include="Resources\strum_off.png" />
+    <None Include="Resources\strum_up.png" />
+    <Content Include="Resources\yellow_on.png" />
     <Content Include="ScpDriverInstaller.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

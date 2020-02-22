@@ -1,16 +1,21 @@
 # WiiHero
-WiiHero is a utility program that allows you to use your **Nintendo Wii guitar** on your PC. By using an **Arduino** as a proxy, we emulate a **XBOX 360 controller** to Windows and use that to play all games we want.
+WiiHero is a project that allows you to use your **Nintendo Wii guitar** on your PC. By using an **Arduino** as a proxy and a C# project we emulate an **XBOX 360 controller** to Windows.
 
 ### How to play
+To prepare, you have to follow these steps:
 
-To use WiiHero, you have to follow these steps:
+* Install the [WiiChuck](https://github.com/madhephaestus/WiiChuck) Arduino library.
+* Upload the Arduino sketch.
+* Install the XBOX 360 driver **ScpDriverInstaller.exe**. (This only has to be done once.)
 
-1. Connect to your Arduino over serial.
-2. Select which controller you want to play on (For multiple players)
-3. Install the driver **ScpDriverInstaller.exe** (Do this only one)
-4. Press plug to plug in the virtual controller.
+Now we can run WiiHero. Follow these steps:
 
-The Arduino and guitar need a handshake to function. This means that when the Arduino and guitar have been disconnected, you need to reset the Arduino. You can do this by either un-and re-plugging it, or pressing the reset button on the Arduino board.
+* Select the proper COM port from the list.
+* Press connect.
+* Select which controller you want to play on. (For multiple players, Controller 1 is default)
+* Press "Plug" to plug-in the virtual controller.
+
+The Arduino and guitar need a so called "handshake" to function. This handshake only runs on the startup of the Arduino. This means that when the Arduino and guitar have been disconnected, you need to reset the Arduino. You can do this by either un-and re-plugging it or pressing the reset button on the Arduino board.
 
 ![Program](http://jkctech.nl/posts/wiihero/pictures/program.png)
 
@@ -41,7 +46,7 @@ Pressing the background will show a colorpicker which allows you to change the b
 ![Colorpicker](http://jkctech.nl/posts/wiihero/pictures/guitarscreen_color.png)
 
 ### Hardware
-For this project to work, you have to connect your guitar to an Arduino. I recommend an Arduino Nano because of its small footprint. You will also need either a **Nintendo Classic extension cable** which you are willing to sacrifice, or a **Arduino Nunchuck Connector**. Both will be easy to find for purchase online.
+For this project to work, you will have to do some electronics. You have to connect your guitar to an Arduino. I recommend using an Arduino Nano because of its small footprint and USB connection.. You will also need either a **Nintendo Classic extension cable** which you are willing to sacrifice, or an **Arduino Nunchuck Connector**. Both will be easy to find for purchase online.
 
 ![Connector Types](http://jkctech.nl/posts/wiihero/pictures/twoconnectors.png)
 
@@ -50,8 +55,6 @@ The premade Arduino Nunchuck connector has its pinout written on the board but d
 ![Wiring](http://jkctech.nl/posts/wiihero/pictures/wiring.png)
 
 Now upload the Arduino sketch provided in the repo and the hardware is done.
-
-**Please note you will need the [WiiChuck](https://github.com/madhephaestus/WiiChuck) Arduino library for this project.**
 
 ### How does it work?
 

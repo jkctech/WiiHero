@@ -1,4 +1,5 @@
 <img align='left' src="Assets/Logo/logo.png" width="80">
+
 WiiHero is a project that allows you to use your **Nintendo Wii guitar** on your PC. By using an **Arduino** as a proxy and a C# project we emulate an **XBOX 360 controller** to Windows.
 
 <hr>

@@ -20,7 +20,7 @@ Now we can run WiiHero. Follow these steps:
 
 The Arduino and guitar need a so called "handshake" to function. This handshake only runs on the startup of the Arduino. This means that when the Arduino and guitar have been disconnected, you need to reset the Arduino. You can do this by either un-and re-plugging it or pressing the reset button on the Arduino board.
 
-![Program](assets/program.png)
+![Program](Assets/program.png)
 
 #### Default mapping
 By default the keys are mapped like this:
@@ -42,20 +42,20 @@ By default the keys are mapped like this:
 The guitarscreen is an option made for content creators.
 Button presses will show up here, which can be chroma keyed in (for example) OBS.
 
-![GuitarScreen](assets/guitarscreen.png)
+![GuitarScreen](Assets/guitarscreen.png)
 
 Pressing the background will show a colorpicker which allows you to change the background color if you prefer so.
 
-![Colorpicker](assets/guitarscreen_color.png)
+![Colorpicker](Assets/guitarscreen_color.png)
 
 ### Hardware
 For this project to work, you will have to do some electronics. You have to connect your guitar to an Arduino. I recommend using an Arduino Nano because of its small footprint and USB connection.. You will also need either a **Nintendo Classic extension cable** which you are willing to sacrifice, or an **Arduino Nunchuck Connector**. Both will be easy to find for purchase online.
 
-![Connector Types](assets/twoconnectors.png)
+![Connector Types](Assets/twoconnectors.png)
 
 The premade Arduino Nunchuck connector has its pinout written on the board but doesn't provide the strongest connection. Therefore I prefer to cut up an extension cable. For this approach, you will need this wiring:
 
-![Wiring](assets/wiring.png)
+![Wiring](Assets/wiring.png)
 
 Now upload the Arduino sketch provided in the repo and the hardware is done.
 
@@ -80,12 +80,12 @@ We now have the ability to map the buttons in any game we want.
 ### Pictures
 The first iteration of this project makes use of the unused RJ11 port on the side of the guitar. By modifying the wiring inside, I used its 4 pins to transfer over the power and datalines. I used an Arduino Nano, an RJ11 phonecable extension cord and some heatshrink tubing to make it into a very small and usable device.
 
-![RJ11](assets/pic_rj11.jpg)
+![RJ11](Assets/pic_rj11.jpg)
 
-![RJ11 Inside](assets/pic_insideconnector.jpg)
+![RJ11 Inside](Assets/pic_insideconnector.jpg)
 
-![Guitar Inside](assets/pic_inside.jpg)
+![Guitar Inside](Assets/pic_inside.jpg)
 
-![Arduino](assets/pic_arduino.jpg)
+![Arduino](Assets/pic_arduino.jpg)
 
-![Result](assets/pic_result.jpg)
+![Result](Assets/pic_result.jpg)

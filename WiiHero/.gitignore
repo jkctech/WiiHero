@@ -1,2 +1,4 @@
 packages/*
 bin/*
+.vs/
+obj/
